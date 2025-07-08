@@ -1,1 +1,1 @@
-worker: python cargobot.py
+web: python cargobot.py
