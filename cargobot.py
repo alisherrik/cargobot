@@ -74,9 +74,9 @@ async def show_pricing(update: Update, context: ContextTypes.DEFAULT_TYPE) -> No
     pricing_info = """
 Нархномаи мо ⤵️⤵️⤵️
 Қабули борҳо аз 0.5кг ҳисоб карда мешавад.
-Аз 0.1гр то 0.5 кг --1.65$
-Аз 0.5кг то 1 кг ---3.3$
-1 кг ва боло аз 1кг --3.3$ҳисоб карда мешавад
+Аз 0.1–0.5 кг → 1.5$
+Аз 0.51–1 кг → 3$
+1 куб → 300$ ҳисоб карда мешавад
 """
     await update.message.reply_text(pricing_info)
 
