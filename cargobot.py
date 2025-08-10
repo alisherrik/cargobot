@@ -121,11 +121,10 @@ if __name__ == '__main__':
     app.add_handler(CommandHandler("start", start))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_button_press))
 
-    print("Бот шурӯъ шуд...")
-    port = int(os.getenv("PORT", 8443))
-    app.run_webhook(
-        listen="0.0.0.0",
-        port=port,
-        url_path=BOT_TOKEN,
-        webhook_url=f"https://cargobot.onrender.com/{BOT_TOKEN}"
+   print("Polling mode.")
+    app.run_polling(
+        poll_interval=2.0,
+        timeout=30,
+        allowed_updates=None,
+        drop_pending_updates=True
     )
